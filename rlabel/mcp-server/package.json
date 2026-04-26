@@ -1,0 +1,26 @@
+{
+  "name": "rlabel-mcp-server",
+  "version": "2.0.0",
+  "type": "module",
+  "description": "MCP Server for rlabel automation and testing",
+  "main": "dist/index.js",
+  "bin": {
+    "rlabel-mcp": "dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx src/index.ts",
+    "start": "node dist/index.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "execa": "^9.5.2",
+    "fast-glob": "^3.3.3",
+    "playwright": "^1.51.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.5",
+    "tsx": "^4.19.2",
+    "typescript": "~5.8.3"
+  }
+}

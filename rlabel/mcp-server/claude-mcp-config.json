@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "rlabel-tests": {
+      "command": "node",
+      "args": ["D:\\Projects\\rustlabelme\\rlabel\\mcp-server\\dist\\index.js"],
+      "cwd": "D:\\Projects\\rustlabelme\\rlabel"
+    }
+  }
+}

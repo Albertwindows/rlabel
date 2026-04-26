@@ -1,0 +1,38 @@
+[package]
+name = "rlabel"
+version = "0.2.0"
+description = "RLabel - AI-Powered Image Annotation Tool"
+authors = ["RLabel Team"]
+edition = "2021"
+
+[lib]
+name = "rlabel_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[features]
+default = ["custom-protocol"]
+custom-protocol = ["tauri/custom-protocol"]
+
+[dependencies]
+tauri = { version = "2", features = [] }
+tauri-plugin-opener = "2"
+tauri-plugin-dialog = "2.6.0"
+tauri-plugin-fs = "2.4.5"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter", "fmt"] }
+tracing-appender = "0.2"
+thiserror = "2.0"
+image = "0.25"
+imageproc = "0.25"
+ndarray = "0.16"
+base64 = "0.22"
+reqwest = { version = "0.12", features = ["json", "blocking"] }
+tokio = { version = "1", features = ["full"] }
+uuid = { version = "1", features = ["v4"] }
+glob = "0.3"
+rayon = "1.10"
